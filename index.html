@@ -7,141 +7,141 @@
     <title>Goblin Game</title>
     <Script>
         function gameStart(){
-            playerTurn = false;
-            pile1 = 3;
-            pile2 = 3;
-            pile3 = 3;
-            myDiv = document.getElementById("speachBox");
-            myPiles = document.getElementById("piles");
-            myPiles.innerHTML = "Pile 1: " + pile1 + "|| Pile 2: " + pile2 + "|| Pile 3: " + pile3;
+            Playermove = false;
+            pileone = 3;
+            piletwo = 3;
+            pilethree = 3;
+            divv = document.getElementById("speachBox");
+            pilles = document.getElementById("piles");
+            pilles.innerHTML = "Pile One: " + pileone + "|| Pile two: " + piletwo + "|| Pile Three: " + pilethree;
             
 
-            if(playerTurn){
-                       myPiles.innerHTML = "Pile 1: " + pile1 + "|| Pile 2: " + pile2 + "|| Pile 3: " + pile3;
-                myDiv.innerHTML ="Pick a pile to take a rock"
+            if(Playermove){
+                       pilles.innerHTML = "Pile One: " + pileone + "|| Pile two: " + piletwo + "|| Pile Three: " + pilethree;
+                divv.innerHTML ="Pick a pile to take a rock"
                      playersTurn();
-                            myDiv.innerHTML ="bad move";
-                          myPiles.innerHTML = "Pile 1: " + pile1 + "|| Pile 2: " + pile2 + "|| Pile 3: " + pile3;
-                playerTurn = false;
+                            divv.innerHTML ="bad move";
+                          pilles.innerHTML = "Pile One: " + pileone + "|| Pile two: " + piletwo + "|| Pile Three: " + pilethree;
+                Playermove = false;
                         }
             else{
-                myPiles.innerHTML = "Pile 1: " + pile1 + "|| Pile 2: " + pile2 + "|| Pile 3: " + pile3;
+                pilles.innerHTML = "Pile One: " + pileone + "|| Pile two: " + piletwo + "|| Pile Three: " + pilethree;
                          goblinTurn();
-                myPiles.innerHTML = "Pile 1: " + pile1 + "|| Pile 2: " + pile2 + "|| Pile 3: " + pile3;
-                playerTurn = true;
+                pilles.innerHTML = "Pile One: " + pileone + "|| Pile two: " + piletwo + "|| Pile Three: " + pilethree;
+                Playermove = true;
                          }
         }
                         gameEnd();
         
         function playersTurn(){
-            myDiv.innerHTML = "Click the Corresponding Button"
+            divv.innerHTML = "Click the Corresponding Button"
                   }
                 function goblinTurn(){
-                      if (pile1 == pile2 && pile2 == pile3){
-                pile1--;
-                         myDiv.innerHTML = " goblins took a rock from pile 1";
+                      if (pileone == piletwo && piletwo == pilethree){
+                pileone--;
+                         divv.innerHTML = " goblins took a rock from Pile One";
                       }
-            else if (pile1 > pile2 && pile1 > pile3){
-                             pile1--;
-                myDiv.innerHTML = "goblins took a rock from pile 1";
+            else if (pileone > piletwo && pileone > pilethree){
+                             pileone--;
+                divv.innerHTML = "goblins took a rock from Pile One";
             }
-                       else if (pile2 > pile1 && pile2 > pile3){
-                                     pile2--;
-                myDiv.innerHTML = "goblins took a rock from pile 2";
+                       else if (piletwo > pileone && piletwo > pilethree){
+                                     piletwo--;
+                divv.innerHTML = "goblins took a rock from Pile two";
                        }
-                    else if (pile3 > pile1 && pile3 > pile2){
-                pile3--;
-                          myDiv.innerHTML = "goblins took a rock from pile 3";
+                    else if (pilethree > pileone && pilethree > piletwo){
+                pilethree--;
+                          divv.innerHTML = "goblins took a rock from Pile Three";
                    }
         }
-                   function one1(){
-            if (pile1 < 1){
-                           myDiv.innerHTML = "no more rocks in this pile";
+                   function oneone(){
+            if (pileone < 1){
+                           divv.innerHTML = "no more rocks in this pile";
             }
             else{
-                             pile1--;
-                myDiv.innerHTML = "removed one rock from pile 1";
+                             pileone--;
+                divv.innerHTML = "removed one rock from Pile One";
                           }
         }
-                    function one2(){
-            if (pile1 < 2){
-                myDiv.innerHTML = "trying to take more rocks than there are";
+                    function onetwo(){
+            if (pileone < 2){
+                divv.innerHTML = "trying to take more rocks than there are";
                       }
             else{
-                pile1 -=2;
-                myDiv.innerHTML = "ou removed two rocks from pile 1";
+                pileone -=2;
+                divv.innerHTML = "ou removed two rocks from Pile One";
                      }
         }
-        function one3(){
-            if (pile1 < 3){
-                myDiv.innerHTML = "trying to take more rocks than there are";
+        function onethree(){
+            if (pileone < 3){
+                divv.innerHTML = "trying to take more rocks than there are";
                  }
             else{
-                        pile1 -= 3;
-                myDiv.innerHTML = "removed three rock from pile 1";
+                        pileone -= 3;
+                divv.innerHTML = "removed three rock from Pile One";
             }
            }
-        function two1(){
-                            if (pile2 < 1){
-                            myDiv.innerHTML = "no more rocks in this pile";
+        function twoone(){
+                            if (piletwo < 1){
+                            divv.innerHTML = "no more rocks in this pile";
                            }
             else{
-                pile2--;
-                          myDiv.innerHTML = "removed one rock from pile 2";
+                piletwo--;
+                          divv.innerHTML = "removed one rock from Pile two";
             }
                    }
-        function two2(){
-            if (pile2 < 2){
-                     myDiv.innerHTML = "not enough rocks in this pile";
+        function twotwo(){
+            if (piletwo < 2){
+                     divv.innerHTML = "not enough rocks in this pile";
             }
                       else{
-                          pile2 -= 2;
-                myDiv.innerHTML = "removed two rocks from pile 2";
+                          piletwo -= 2;
+                divv.innerHTML = "removed two rocks from Pile two";
             }
         }
-                  function two3(){
-            if (pile2 < 3){
-                          myDiv.innerHTML = "not enough rocks";
+                  function twothree(){
+            if (piletwo < 3){
+                          divv.innerHTML = "not enough rocks";
             }
             else{
-                          pile2 -= 3;
-                myDiv.innerHTML = "removed three rocks from pile 1";
+                          piletwo -= 3;
+                divv.innerHTML = "removed three rocks from Pile One";
             }
                              }
-        function three1(){
-            if (pile3 < 1){
-                          myDiv.innerHTML = "no more rocks in this pile";
+        function threeone(){
+            if (pilethree < 1){
+                          divv.innerHTML = "no more rocks in this pile";
             }
             else{
-                pile3--;
-                myDiv.innerHTML = "removed one rock from pile 3";
+                pilethree--;
+                divv.innerHTML = "removed one rock from Pile Three";
                      }
         }
-        function three2(){
-                             if (pile3 < 2){
-                myDiv.innerHTML = "not enough rocks in this pile";
+        function threetwo(){
+                             if (pilethree < 2){
+                divv.innerHTML = "not enough rocks in this pile";
             }
                      else{
-                pile3 -= 2;
-                     myDiv.innerHTML = "removed two rocks from pile 3";
+                pilethree -= 2;
+                     divv.innerHTML = "removed two rocks from Pile Three";
             }
         }
-        function three3(){
-            if (pile3 < 3){
-                myDiv.innerHTML = "no more rocks in this pile";
+        function threethree(){
+            if (pilethree < 3){
+                divv.innerHTML = "no more rocks in this pile";
             }
             else{
-                pile3 -= 3;
-                myDiv.innerHTML = "removed one rock from pile 3";
+                pilethree -= 3;
+                divv.innerHTML = "removed one rock from Pile Three";
             }
         }
                         function gameEnd(){
-            myDiv.innerHTML = "Game over"
+            divv.innerHTML = "Game over"
                         if(playersTurn){
-                myDiv.innerHTML = "goblins lose"
+                divv.innerHTML = "goblins lose"
             }
             else{
-                        myDiv.innerHTML = "goblins win"
+                        divv.innerHTML = "goblins win"
             }
         }
     </Script>
@@ -153,15 +153,15 @@
     <button onclick="gameStart();">PLAY(reset)</button>
     <P> </P>
               <div>
-        <button onclick="one1(), playersTurn();">Pile 1-1</button> <button onclick="two1(), playersTurn()">Pile 2-1</button> <button onclick="three1(), playersTurn()">Pile 3-1</button>
+        <button onclick="oneone(), playersTurn();">Pile One-1</button> <button onclick="twoone(), playersTurn()">Pile two-1</button> <button onclick="threeone(), playersTurn()">Pile Three-1</button>
     </div>
     <br>
     <div>
-                               <button onclick="playersTurn();">Pile 1-2</button> <button onclick="playersTurn();">Pile 2-2</button> <button onclick="playersTurn();">Pile 3-2</button>
+                               <button onclick="playersTurn();">Pile One-2</button> <button onclick="playersTurn();">Pile two-2</button> <button onclick="playersTurn();">Pile Three-2</button>
     </div>
           <br>
     <div>
-        <button onclick="playersTurn();">Pile 1-3</button> <button onclick="playersTurn();">Pile 2-3</button> <button onclick="playersTurn();">Pile 3-3</button>
+        <button onclick="playersTurn();">Pile One-3</button> <button onclick="playersTurn();">Pile two-3</button> <button onclick="playersTurn();">Pile Three-3</button>
           </div>
     <br>
               <div id="piles">
@@ -174,3 +174,4 @@
 
 </body>
 </html>
+
